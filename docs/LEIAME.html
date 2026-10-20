@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CharFinder</title>
+  <link rel="icon" href="../assets/CharFinder.ico" type="image/x-icon">
   <style>
     :root {
       --bg: #f6f7fb;
@@ -68,7 +69,18 @@
       <h1>CharFinder</h1>
       <p class="lead">Encontre caracteres potencialmente incompatíveis em XML e salve uma cópia revisada.</p>
       <p>A análise é local: o original não é alterado e o arquivo não é enviado para serviços externos.</p>
+      <p>Repositório no GitHub: <a href="https://github.com/PedroAntunes-work/CharFinder">github.com/PedroAntunes-work/CharFinder</a>.</p>
     </header>
+
+    <section id="configuracao-local">
+      <h2>Configurar na máquina local</h2>
+      <ol>
+        <li>Na pasta distribuída do CharFinder, confirme que <strong>configurar_charfinder.bat</strong> está junto de <strong>CharFinder.exe</strong>.</li>
+        <li>Execute o arquivo <strong>configurar_charfinder.bat</strong> com um clique duplo. O script instala ou atualiza o aplicativo em <code>C:\Charfinder</code> e cria o atalho <strong>CharFinder</strong> na área de trabalho.</li>
+        <li>Quando a configuração terminar, abra o CharFinder pelo atalho da área de trabalho.</li>
+      </ol>
+      <div class="callout"><strong>Importante:</strong> o script precisa conseguir gravar na raiz do disco C:. Para atualizar uma instalação em uso, feche o CharFinder antes de executar o arquivo.</div>
+    </section>
 
     <section id="passos">
       <h2>Como usar</h2>
