@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "character": "\u0082",
+      "raw_hex": "82",
+      "replacement": "'",
+      "note": "Aspa simples Windows-1252"
+    },
+    {
+      "character": "\u0084",
+      "raw_hex": "84",
+      "replacement": "\"",
+      "note": "Aspa dupla Windows-1252"
+    },
+    {
+      "character": "\u0085",
+      "raw_hex": "85",
+      "replacement": "...",
+      "note": "Reticencias Windows-1252"
+    },
+    {
+      "character": "\u0091",
+      "raw_hex": "91",
+      "replacement": "'",
+      "note": "Aspa simples Windows-1252"
+    },
+    {
+      "character": "\u0092",
+      "raw_hex": "92",
+      "replacement": "'",
+      "note": "Aspa simples Windows-1252"
+    },
+    {
+      "character": "\u0093",
+      "raw_hex": "93",
+      "replacement": "\"",
+      "note": "Aspa dupla Windows-1252"
+    },
+    {
+      "character": "\u0094",
+      "raw_hex": "94",
+      "replacement": "\"",
+      "note": "Aspa dupla Windows-1252"
+    },
+    {
+      "character": "\u0096",
+      "raw_hex": "96",
+      "replacement": "-",
+      "note": "Travess\u00e3o curto em Windows-1252"
+    },
+    {
+      "character": "\u0097",
+      "raw_hex": "97",
+      "replacement": "-",
+      "note": "Travess\u00e3o Windows-1252"
+    },
+    {
+      "character": "\u009f",
+      "raw_hex": "9F",
+      "replacement": "teste",
+      "note": "Regra personalizada"
+    },
+    {
+      "character": "\u009f",
+      "raw_hex": "C29F",
+      "replacement": " ",
+      "note": "Caractere de controle C1"
+    },
+    {
+      "character": "\u200b",
+      "raw_hex": "E2808B",
+      "replacement": " ",
+      "note": "Espaco de largura zero"
+    },
+    {
+      "character": "\u2010",
+      "raw_hex": "E28090",
+      "replacement": "-",
+      "note": "Hifen tipografico"
+    },
+    {
+      "character": "\u2011",
+      "raw_hex": "E28091",
+      "replacement": "-",
+      "note": "Hifen nao separavel"
+    },
+    {
+      "character": "\u2012",
+      "raw_hex": "E28092",
+      "replacement": "-",
+      "note": "Travess\u00e3o curto"
+    },
+    {
+      "character": "\u2013",
+      "raw_hex": "E28093",
+      "replacement": "-",
+      "note": "Travess\u00e3o"
+    },
+    {
+      "character": "\u2014",
+      "raw_hex": "E28094",
+      "replacement": "-",
+      "note": "Travess\u00e3o longo"
+    },
+    {
+      "character": "\u2015",
+      "raw_hex": "E28095",
+      "replacement": "-",
+      "note": "Travess\u00e3o horizontal"
+    },
+    {
+      "character": "\u2018",
+      "raw_hex": "E28098",
+      "replacement": "'",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u2019",
+      "raw_hex": "E28099",
+      "replacement": "'",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201a",
+      "raw_hex": "E2809A",
+      "replacement": "'",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201b",
+      "raw_hex": "E2809B",
+      "replacement": "'",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201c",
+      "raw_hex": "E2809C",
+      "replacement": "\"",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201d",
+      "raw_hex": "E2809D",
+      "replacement": "\"",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201e",
+      "raw_hex": "E2809E",
+      "replacement": "\"",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u201f",
+      "raw_hex": "E2809F",
+      "replacement": "\"",
+      "note": "Aspas curvas"
+    },
+    {
+      "character": "\u2026",
+      "raw_hex": "E280A6",
+      "replacement": "...",
+      "note": "Reticencias"
+    },
+    {
+      "character": "\u2212",
+      "raw_hex": "E28892",
+      "replacement": "-",
+      "note": "Sinal de menos"
+    }
+  ]
+}

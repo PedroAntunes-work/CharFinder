@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "charfinder"
+version = "0.1.0"
+description = "Diagnóstico local e substituição assistida de caracteres em arquivos XML"
+requires-python = ">=3.12"
+dependencies = [
+    "tkinterdnd2>=0.4.3",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
+build = [
+    "pyinstaller>=6.10",
+]
+
+[project.scripts]
+charfinder = "charfinder:main"
+
+[tool.setuptools]
+py-modules = ["charfinder", "xml_analyzer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

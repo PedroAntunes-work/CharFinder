@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CharFinder</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #58657a;
+      --blue: #2f6feb;
+      --blue-pale: #eef4ff;
+      --border: #dfe6f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding: 24px;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    header, section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 { margin-top: 0; }
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+    .callout {
+      margin: 12px 0;
+      padding: 12px 15px;
+      border-left: 4px solid var(--blue);
+      border-radius: 4px;
+      background: var(--blue-pale);
+    }
+    ol, ul { padding-left: 23px; }
+    li { margin: 4px 0; }
+    footer { padding: 8px 4px; color: var(--muted); text-align: center; font-size: .9rem; }
+    @media (max-width: 600px) {
+      body { padding: 12px 8px; }
+      header, section { padding: 18px; }
+    }
+    @media print {
+      body { padding: 0; background: #fff; }
+      header, section { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>CharFinder</h1>
+      <p class="lead">Encontre caracteres potencialmente incompatíveis em XML e salve uma cópia revisada.</p>
+      <p>A análise é local: o original não é alterado e o arquivo não é enviado para serviços externos.</p>
+    </header>
+
+    <section id="passos">
+      <h2>Como usar</h2>
+      <ol>
+        <li>Abra <strong>CharFinder.exe</strong>, selecione um arquivo <strong>.xml</strong> ou arraste-o para a janela quando o recurso estiver disponível. Clique em <strong>Analisar arquivo</strong>.</li>
+        <li>Revise as ocorrências listadas. Selecione uma ocorrência para consultar os detalhes e definir uma substituição, usar a sugestão ou remover o caractere.</li>
+        <li>As sugestões automáticas começam desativadas. Revise e ajuste cada ocorrência individualmente. Ocorrências sem substituição definida precisam ser resolvidas antes de salvar.</li>
+        <li>Para uma substituição personalizada, marque opcionalmente <strong>Salvar esta regra De-Para no catálogo local</strong> para reutilizá-la em análises futuras.</li>
+        <li>Clique em <strong>Salvar cópia corrigida</strong> e escolha o nome e o local de destino. O original não é alterado nem pode ser sobrescrito. Mesmo sem ocorrências, é possível salvar uma cópia idêntica.</li>
+      </ol>
+      <div class="callout"><strong>Antes de salvar:</strong> confira se as substituições preservam o sentido dos dados. Valide a cópia no sistema que vai recebê-la.</div>
+    </section>
+
+    <section id="novidades">
+      <h2>Atualizações desta versão</h2>
+      <ul>
+        <li><strong>Catálogo De-Para local:</strong> regras personalizadas podem ser salvas e reutilizadas. Elas podem considerar o caractere e os bytes de origem, ajudando a diferenciar casos que parecem iguais, mas vêm de codificações distintas.</li>
+        <li><strong>Mais controle sobre correções:</strong> sugestões não são aplicadas automaticamente. É possível tratá-las individualmente ou definir uma substituição personalizada.</li>
+        <li><strong>Ocorrências sem sugestão:</strong> caracteres de controle ou formatação não classificados são destacados como desconhecidos para revisão; não recebem uma correção automática presumida.</li>
+        <li><strong>Cópia protegida:</strong> o programa mantém o arquivo original, conserva a codificação e os demais bytes sempre que possível e verifica a estrutura XML quando consegue interpretar o documento. Substituições personalizadas com <code>&lt;</code>, <code>&gt;</code> ou <code>&amp;</code> são bloqueadas para evitar alterações na estrutura.</li>
+      </ul>
+    </section>
+
+    <section id="limites">
+      <h2>O que a análise significa</h2>
+      <ul>
+        <li>A ferramenta identifica caracteres cobertos por regras internas e pelo catálogo local, além de caracteres proibidos pelo XML 1.0. Pontuação tipográfica e o espaço de largura zero são exemplos de caracteres com regras conhecidas.</li>
+        <li>Alguns bytes Windows-1252 em arquivos declarados como ISO-8859-1 podem ser sinalizados como possível incompatibilidade de codificação. Isso é uma heurística, não uma confirmação da causa de uma rejeição.</li>
+        <li>Caracteres Unicode válidos comuns sem regra explícita geralmente não são sinalizados. Caracteres de controle ou formatação não classificados podem aparecer como desconhecidos e exigem avaliação do usuário.</li>
+        <li>O catálogo fica no arquivo <code>character-exceptions.json</code>, na pasta do executável. Catálogos antigos em <code>%LOCALAPPDATA%\CharFinder</code> continuam sendo carregados e suas regras são incorporadas ao novo arquivo quando uma nova regra é salva. O arquivo pode ser editado ou removido fora do aplicativo; faça uma cópia de segurança se quiser preservar suas regras.</li>
+        <li>Não é necessário XSD nem conexão com a internet. “Nenhum caractere encontrado” não garante que outro sistema aceitará o arquivo: valide a cópia no sistema destinatário e confirme avisos de codificação.</li>
+      </ul>
+    </section>
+
+    <footer>CharFinder — análise local de arquivos XML.</footer>
+  </main>
+</body>
+</html>
